@@ -1,15 +1,15 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 const useComment = (i) => {
-  const [comment, setComment] = useState(i)
+  const [comment, setComment] = useState(i);
 
   return [
     comment,
-    e => { 
+    (e) => {
       setComment({
-        content: e
-      })
-    }
-  ]
-}
-export default useComment
+        content: e,
+      });
+    },
+  ];
+};
+export default useComment;

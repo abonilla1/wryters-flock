@@ -10,7 +10,6 @@ function EntryData(props) {
   const [invalidEntry, setValidEntry] = useState(true);
   const formRef = useRef();
 
-
   const [state, handleChange] = useForm({
     title: "",
     description: "",
@@ -24,19 +23,21 @@ function EntryData(props) {
   });
 
   async function handleCreateEntry(newEntry) {
-    newEntry.content = props.draftId
+    newEntry.content = props.draftId;
     await entryAPI.create(newEntry);
     history.push("/entries");
   }
 
   useEffect(() => {
-    formRef.current.checkValidity() ? setValidEntry(false) : setValidEntry(true);
+    formRef.current.checkValidity()
+      ? setValidEntry(false)
+      : setValidEntry(true);
   }, [state]);
 
   async function handleSubmit(e) {
     e.preventDefault();
-    state.content = props._draftId
-    console.log(state)
+    state.content = props._draftId;
+    console.log(state);
     handleCreateEntry(state);
   }
 
@@ -46,8 +47,7 @@ function EntryData(props) {
       <div className="AddEntry">
         <form className="col s12" ref={formRef} onSubmit={handleSubmit}>
           <div className="row">
-            <div>
-            </div>
+            <div></div>
             <div className="input-field col s12">
               <input type="hidden" name="content" value={props.myContent} />
               <input

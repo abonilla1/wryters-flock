@@ -3,9 +3,6 @@ import * as entriesAPI from "../../services/entry-api";
 import EntryCard from "../../components/EntryCard/EntryCard";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import QuoteCard from "../../components/QuoteCard/QuoteCard";
-
 
 const useStyles = makeStyles((theme) => ({
   alignItemsAndJustifyContent: {
@@ -25,13 +22,12 @@ const EntryIndex = (props) => {
     })();
   }, []);
 
-  async function handleDeleteEntry(id){
-    await entriesAPI.deleteEntry(id)
-    setEntries(entries.filter(entry => entry._id !== id))
+  async function handleDeleteEntry(id) {
+    await entriesAPI.deleteEntry(id);
+    setEntries(entries.filter((entry) => entry._id !== id));
   }
 
-
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <>
@@ -47,14 +43,8 @@ const EntryIndex = (props) => {
           </div>
         ))}
       </Container>
-
-
     </>
   );
 };
 
 export default EntryIndex;
-
-// {/* {quotes.map((quote) => (
-//   <QuoteCard key={quote._id} quote={quote} user={props.user} />
-// ))} */}

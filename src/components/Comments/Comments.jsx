@@ -9,13 +9,6 @@ const CommentMin = (props) => (
     <Header as="h3" dividing>
       Comments
     </Header>
-    {/* 
-    <textarea
-      name="content"
-      form="cmmtform"
-      onChange={props.handleChange}
-      placeholder="comment here..."
-    /> */}
     <Form onSubmit={props.handleSubmit}>
       <textarea
         onChange={props.handleChange}
@@ -26,9 +19,6 @@ const CommentMin = (props) => (
         Leave A Comment
       </Button>
     </Form>
-
-    
-
     <div >
       
       {props.comments.map((comment) => (

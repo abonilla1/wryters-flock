@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 export const useContent = (initial) => {
-  const [content, setContent] = useState(initial)
+  const [content, setContent] = useState(initial);
 
   return [
     content,
-    e => {
+    (e) => {
       setContent({
-        content: e
-      })
-    }
-  ]
-}
+        content: e,
+      });
+    },
+  ];
+};

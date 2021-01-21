@@ -1,6 +1,6 @@
-import React from 'react';
-import './Document.css'
-import { Editor } from '@tinymce/tinymce-react';
+import React from "react";
+import "./Document.css";
+import { Editor } from "@tinymce/tinymce-react";
 
 const Document = (props) => {
   return (
@@ -11,22 +11,22 @@ const Document = (props) => {
         resize: false,
         readonly: true,
         menubar: false,
-        indentation: '20pt',
+        indentation: "20pt",
         nonbreaking_force_tab: true,
         plugins: [
-          'advlist autolink lists link image charmap print preview anchor',
-          'searchreplace visualblocks code fullscreen',
-          'insertdatetime media table paste code help wordcount',
-          'nonbreaking',
+          "advlist autolink lists link image charmap print preview anchor",
+          "searchreplace visualblocks code fullscreen",
+          "insertdatetime media table paste code help wordcount",
+          "nonbreaking",
         ],
         toolbar:
-          'undo redo | formatselect | bold italic backcolor |' +
-          'alignleft aligncenter alignright alignjustify |' +
-          'bullist numlist |'
+          "undo redo | formatselect | bold italic backcolor |" +
+          "alignleft aligncenter alignright alignjustify |" +
+          "bullist numlist |",
       }}
       onEditorChange={props.onChange}
     />
   );
-}
+};
 
-export default Document
+export default Document;

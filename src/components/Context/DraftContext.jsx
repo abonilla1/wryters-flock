@@ -1,11 +1,10 @@
-import React, { createContext, useState} from "react";
-import Document from "../../components/Document/Document"
-import EntryData from "../../components/EntryData/EntryData"
+import React, { createContext, useState } from "react";
+import Document from "../../components/Document/Document";
+import EntryData from "../../components/EntryData/EntryData";
 
 export const Context = React.createContext({});
 
 export const Provider = () => {
-
   const props = {
     title: "",
     description: "",
@@ -16,8 +15,7 @@ export const Provider = () => {
     contents: "",
     Document,
     EntryData,
-
-  }
+  };
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -28,29 +26,28 @@ export const Provider = () => {
   const [contents, setContents] = useState("");
 
   const entrydata = {
-    title, 
+    title,
     setTitle,
-    description, 
+    description,
     setDescription,
-    published, 
+    published,
     setPublished,
-    classification, 
+    classification,
     setClassification,
-    genre, 
+    genre,
     setGenre,
-    author, 
+    author,
     setAuthor,
-    contents, 
+    contents,
     setContents,
-    
   };
 
-  return <Context.Provider value={entrydata}>{Document}{EntryData}</Context.Provider>
-
+  return (
+    <Context.Provider value={entrydata}>
+      {Document}
+      {EntryData}
+    </Context.Provider>
+  );
 };
 
 export default Context;
-
-
-
-

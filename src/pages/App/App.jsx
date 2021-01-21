@@ -11,8 +11,6 @@ import EntryIndex from "../EntryIndex/EntryIndex";
 import DisplayEntry from "../DisplayEntry/DisplayEntry";
 import "./App.css";
 
-//Navbar, form pages, entries, searches, profile
-
 class App extends Component {
   state = {
     user: authService.getUser(),
@@ -70,7 +68,13 @@ class App extends Component {
         <Route
           exact
           path="/dashboard"
-          render={() => (user ? <Dashboard user={this.state.user} /> : <Redirect to="/login" />)}
+          render={() =>
+            user ? (
+              <Dashboard user={this.state.user} />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
         />
         <Route
           exact
@@ -80,26 +84,25 @@ class App extends Component {
         <Route
           exact
           path="/entries"
-          render={() => <EntryIndex
-            user={this.state.user}
-          />}
+          render={() => <EntryIndex user={this.state.user} />}
         />
         <Route
           exact
           path="/entry"
-          render={({ history, location }) => <DisplayEntry
-            history={history}
-            location={location}
-            user={this.state.user}
-          />}
+          render={({ history, location }) => (
+            <DisplayEntry
+              history={history}
+              location={location}
+              user={this.state.user}
+            />
+          )}
         />
         <Route
           exact
           path="/draft"
-          render={({ history }) => <CreateDraft
-            history={history}
-            user={this.state.user}
-          />}
+          render={({ history }) => (
+            <CreateDraft history={history} user={this.state.user} />
+          )}
         />
       </>
     );
