@@ -2,13 +2,12 @@ Summary:
 
 This application renders a rich text editor with collaborative features to allow a venue for writers to hone their craft.
 
-Link to get started : // “url”
+Link to get started : https://wryters-flock.herokuapp.com/
 
 Features:
 
 With WritersFlock you can create, edit and save your literary projects in the cloud database. You can view your own and other’s stories and projects as well as offer feedback, allowing you to focus test your ideas amongst other users. It is simple to get started: click the link to navigate to the website. Browse the latest posts. Or, sign up and start writing using our text editor tools. You can enable feedback on your work if you wish, or simply keep this feature disabled to use our site as a place to draft your next project.
 
-Production:
 
 WF was produced using:
     JavaScript
@@ -19,12 +18,9 @@ WF was produced using:
     MongoDB-Atlas
     Mongoose
     Nodemon
-    &&
-    …
-    …
 Technologies
 
-    Production Challenges: 
+Production Challenges: 
 
 Planned Enhancements: 
 Daily writing prompt
