@@ -21,10 +21,11 @@ WF was produced using:
 Technologies
 
 Production Challenges: 
+Use of the Text Editor API
 
 Planned Enhancements: 
-Daily writing prompt
-Best Daily response voting
-User headliner
-Search and Store by Genre    
-Follow your favorites
+* Daily writing prompt
+* Best Daily response voting
+* User headliner
+* Search and Store by Genre    
+* Follow your favorites
